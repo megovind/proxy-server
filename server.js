@@ -4,7 +4,7 @@ const app = express();
 app.use(cors());
 const { createProxyMiddleware } = require('http-proxy-middleware');
 app.use('/', createProxyMiddleware({ 
-    target: 'http://172.31.50.13:9200', //original url
+    target: 'original_url', //original url
     changeOrigin: true, 
     //secure: false,
     onProxyRes: function (proxyRes, req, res) {
